@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>Tesla Connected</title></head>
+<body style="font-family: system-ui, sans-serif; max-width: 600px; margin: 40px auto; padding: 20px;">
+  <h2>Tesla Authorization Code Received</h2>
+  <p>Your authorization succeeded. Grok Bot can now finish linking your Tesla.</p>
+  <pre id="code" style="background:#f4f4f4;padding:12px;border-radius:6px;overflow-x:auto;"></pre>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById('code').textContent = params.get('code') ? ('Code: ' + params.get('code')) : window.location.href;
+  </script>
+</body>
+</html>
